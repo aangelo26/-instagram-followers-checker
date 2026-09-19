@@ -30,14 +30,6 @@ This makes the project easier to understand, modify, and use, especially for any
 
 The structure is intentionally simple:
 
-instagram-follower-tracker/
-│
-├── input files
-├── output files
-├── main program
-├── README.md
-└── other project files
-
 The exact files may change as the project develops.
 
 🧹 Code Philosophy
