@@ -32,7 +32,7 @@ def carica_dati():
     following = estrai_utenti(FILE_FOLLOWING)
     non_ti_seguono = following - followers
 
-    # Se il CSV esiste già, i nuovi rilevati avranno il badge NEW
+
     for u in non_ti_seguono:
         if u not in dati:
             e_nuovo = "SI" if csv_esiste else "NO"
@@ -47,7 +47,7 @@ def salva_dati(dati):
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         for u in sorted(dati.keys()):
-            # Fallback se la colonna Nuovo non esisteva nei vecchi record
+            # Fallback
             if "Nuovo" not in dati[u]:
                 dati[u]["Nuovo"] = "NO"
             writer.writerow(dati[u])
